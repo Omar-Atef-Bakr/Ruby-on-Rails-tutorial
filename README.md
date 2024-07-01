@@ -1,24 +1,54 @@
-# README
+# Employee Management System
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple Employee Management System built with Ruby on Rails. It allows users to create, read, update, and delete (CRUD) employee records. Each user can only access and manage their own employees.
 
-Things you may want to cover:
+## Features
 
-* Ruby version
+- User authentication: Users can register, log in, and log out.
+- Employee management: Users can create, view, edit, and delete their own employees.
 
-* System dependencies
+## Technologies Used
 
-* Configuration
+- Ruby
+- Ruby on Rails
+- JavaScript
 
-* Database creation
+## Getting Started
 
-* Database initialization
+### Prerequisites
 
-* How to run the test suite
+- Ruby
+- Rails
+- Node.js and NPM
+- Yarn
 
-* Services (job queues, cache servers, search engines, etc.)
+### Installation
 
-* Deployment instructions
+1. Clone the repository
+   ```
+   git clone https://github.com/Omar-Atef-Bakr/employee-management-system.git
+   ```
+2. Navigate to the project directory
+   ```
+   cd employee-management-system
+   ```
+3. Install Ruby dependencies
+   ```
+   bundle install
+   ```
+4. Install JavaScript dependencies
+   ```
+   yarn install
+   ```
+5. Setup the database
+   ```
+   rails db:create db:migrate
+   ```
+6. Start the Rails server
+   ```
+   rails server
+   ```
 
-* ...
+## Usage
+
+Once the server is running, navigate to `http://localhost:3000` in your web browser. Register a new user account, and then log in to start managing employees.
