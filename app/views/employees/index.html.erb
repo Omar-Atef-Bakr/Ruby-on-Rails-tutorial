@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<!--<h1>Employees</h1>-->
+
+<% if user_signed_in? %>
+  <table class="wrapper table table-dark table-striped table-bordered ">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Number</th>
+        <th>Email</th>
+        <th colspan="3"> Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @employees.each do |employee| %>
+        <tr>
+          <td><%= employee.name %></td>
+          <td><%= employee.number %></td>
+          <td><%= employee.email %></td>
+          <td><%= link_to 'Show', employee , class:"btn btn-outline-light"%></td>
+          <td><%= link_to 'Edit', edit_employee_path(employee), class:"btn btn-outline-light" %></td>
+          <td><%= link_to 'Destroy', employee, class:"btn btn-outline-light", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Employee', new_employee_path, class:"btn btn-outline-light" %>
+<% else %>
+  <h2>Sign in to view employees</h2>
+<% end %>
